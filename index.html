@@ -51,7 +51,6 @@ function create () {
     objects.camera = this.cameras.add(0, 0, 800, 600);
     objects.camera.setBackgroundColor('rgba(255, 255, 255, 0.9)');
 
-
     // Ranch tiles
     var h_inicial = this.add.sprite(400, 300, 'hexagon_inicial');
 
@@ -60,21 +59,134 @@ function create () {
     var h_b2 = this.add.image(400, 230, "hexagon_bdf").setInteractive();
     var h_i3 = this.add.image(400, 370, "hexagon_hi").setInteractive();
 
+    var h_i1 = this.add.image(460, 265, "hexagon_hi").setInteractive();
+    var h_i5 = this.add.image(460, 335, "hexagon_hi").setInteractive();
+    var h_b4 = this.add.image(340, 195, "hexagon_bdf").setInteractive();
+    var h_c4 = this.add.image(460, 195, "hexagon_agec").setInteractive();
+    var h_c3 = this.add.image(400, 160, "hexagon_agec").setInteractive();
+    var h_c6 = this.add.image(460, 125, "hexagon_agec").setInteractive();
+    var h_c1 = this.add.image(520, 160, "hexagon_agec").setInteractive();
+    var h_c2 = this.add.image(520, 230, "hexagon_agec").setInteractive();
+    var h_i2 = this.add.image(520, 300, "hexagon_hi").setInteractive();
+    var h_d5 = this.add.image(580, 265, "hexagon_bdf").setInteractive();
+    var h_d6 = this.add.image(580, 335, "hexagon_bdf").setInteractive();
+    var h_e3 = this.add.image(520, 370, "hexagon_agec").setInteractive();
+    var h_e5 = this.add.image(520, 440, "hexagon_agec").setInteractive();
+    var h_e6 = this.add.image(460, 405, "hexagon_agec").setInteractive();
+    var h_f4 = this.add.image(460, 475, "hexagon_bdf").setInteractive();
+    var h_f3 = this.add.image(400, 440, "hexagon_bdf").setInteractive();
+    var h_g5 = this.add.image(340, 405, "hexagon_agec").setInteractive();
+    var h_f1 = this.add.image(340, 475, "hexagon_bdf").setInteractive();
+    var h_g3 = this.add.image(280, 440, "hexagon_agec").setInteractive();
+    var h_g2 = this.add.image(280, 370, "hexagon_agec").setInteractive();
+    var h_h4 = this.add.image(280, 300, "hexagon_hi").setInteractive();
+    var h_a2 = this.add.image(280, 230, "hexagon_agec").setInteractive();
+    var h_a6 = this.add.image(280, 160, "hexagon_agec").setInteractive();
+    var h_b1 = this.add.image(340, 125, "hexagon_bdf").setInteractive();
+    var h_h6 = this.add.image(220, 335, "hexagon_bdf").setInteractive();
+    var h_h5 = this.add.image(220, 265, "hexagon_bdf").setInteractive();
 
     // Animal images
     var a_h1 = this.add.image(340, 265, "pixel");
     var a_g4 = this.add.image(340, 335, "pixel");
     var a_b2 = this.add.image(400, 230, "pixel");
     var a_i3 = this.add.image(400, 370, "pixel");
+    var a_i1 = this.add.image(460, 265, "pixel");
+    var a_i5 = this.add.image(460, 335, "pixel");
+    var a_b4 = this.add.image(340, 195, "pixel");
+    var a_c4 = this.add.image(460, 195, "pixel");
+    var a_c3 = this.add.image(400, 160, "pixel");
+    var a_c6 = this.add.image(460, 125, "pixel");
+    var a_c1 = this.add.image(520, 160, "pixel");
+    var a_c2 = this.add.image(520, 230, "pixel");
+    var a_i2 = this.add.image(520, 300, "pixel");
+    var a_d5 = this.add.image(580, 265, "pixel");
+    var a_d6 = this.add.image(580, 335, "pixel");
+    var a_e3 = this.add.image(520, 370, "pixel");
+    var a_e5 = this.add.image(520, 440, "pixel");
+    var a_e6 = this.add.image(460, 405, "pixel");
+    var a_f4 = this.add.image(460, 475, "pixel");
+    var a_f3 = this.add.image(400, 440, "pixel");
+    var a_g5 = this.add.image(340, 405, "pixel");
+    var a_f1 = this.add.image(340, 475, "pixel");
+    var a_g3 = this.add.image(280, 440, "pixel");
+    var a_g2 = this.add.image(280, 370, "pixel");
+    var a_h4 = this.add.image(280, 300, "pixel");
+    var a_a2 = this.add.image(280, 230, "pixel");
+    var a_a6 = this.add.image(280, 160, "pixel");
+    var a_b1 = this.add.image(340, 125, "pixel");
+    var a_h6 = this.add.image(220, 335, "pixel");
+    var a_h5 = this.add.image(220, 265, "pixel");
+
+
+    h_h1.on('pointerdown', function () { rotateSprite(a_h1); });
+    h_g4.on('pointerdown', function () { rotateSprite(a_g4); });
+    h_b2.on('pointerdown', function () { rotateSprite(a_b2); });
+    h_i3.on('pointerdown', function () { rotateSprite(a_i3); });
+
+    h_i1.on('pointerdown', function () { rotateSprite(a_i1); });
+    h_i5.on('pointerdown', function () { rotateSprite(a_i5); });
+    h_b4.on('pointerdown', function () { rotateSprite(a_b4); });
+    h_c4.on('pointerdown', function () { rotateSprite(a_c4); });
+    h_c3.on('pointerdown', function () { rotateSprite(a_c3); });
+    h_c6.on('pointerdown', function () { rotateSprite(a_c6); });
+    h_c1.on('pointerdown', function () { rotateSprite(a_c1); });
+    h_c2.on('pointerdown', function () { rotateSprite(a_c2); });
+    h_i2.on('pointerdown', function () { rotateSprite(a_i2); });
+    h_d5.on('pointerdown', function () { rotateSprite(a_d5); });
+    h_d6.on('pointerdown', function () { rotateSprite(a_d6); });
+    h_e3.on('pointerdown', function () { rotateSprite(a_e3); });
+    h_e5.on('pointerdown', function () { rotateSprite(a_e5); });
+    h_e6.on('pointerdown', function () { rotateSprite(a_e6); });
+    h_f4.on('pointerdown', function () { rotateSprite(a_f4); });
+    h_f3.on('pointerdown', function () { rotateSprite(a_f3); });
+    h_g5.on('pointerdown', function () { rotateSprite(a_g5); });
+    h_f1.on('pointerdown', function () { rotateSprite(a_f1); });
+    h_g3.on('pointerdown', function () { rotateSprite(a_g3); });
+    h_g2.on('pointerdown', function () { rotateSprite(a_g2); });
+    h_h4.on('pointerdown', function () { rotateSprite(a_h4); });
+    h_a2.on('pointerdown', function () { rotateSprite(a_a2); });
+    h_a6.on('pointerdown', function () { rotateSprite(a_a6); });
+    h_b1.on('pointerdown', function () { rotateSprite(a_b1); });
+    h_h6.on('pointerdown', function () { rotateSprite(a_h6); });
+    h_h5.on('pointerdown', function () { rotateSprite(a_h5); });
 
     // Tile numbers
-    this.add.text(340, 265, '1', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
-    this.add.text(340, 335, '4', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
-    this.add.text(400, 230, '2', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
-    this.add.text(400, 370, '3', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
+    var fontStyle = { fontFamily: 'Roboto Condensed', color: '#000', fontSize: '20px', fontWeight: 'bold', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" };
+    this.add.text(340, 265, 'H1', fontStyle).setOrigin(0.5);
+    this.add.text(340, 335, 'G4', fontStyle).setOrigin(0.5);
+    this.add.text(400, 230, 'B2', fontStyle).setOrigin(0.5);
+    this.add.text(400, 370, 'I3', fontStyle).setOrigin(0.5);
+    this.add.text(460, 265, 'I1', fontStyle).setOrigin(0.5);
+    this.add.text(460, 335, 'I5', fontStyle).setOrigin(0.5);
+    this.add.text(340, 195, 'B4', fontStyle).setOrigin(0.5);
+    this.add.text(460, 195, 'C4', fontStyle).setOrigin(0.5);
+    this.add.text(400, 160, 'C3', fontStyle).setOrigin(0.5);
+    this.add.text(460, 125, 'C6', fontStyle).setOrigin(0.5);
+    this.add.text(520, 160, 'C1', fontStyle).setOrigin(0.5);
+    this.add.text(520, 230, 'C2', fontStyle).setOrigin(0.5);
+    this.add.text(520, 300, 'I2', fontStyle).setOrigin(0.5);
+    this.add.text(580, 265, 'D5', fontStyle).setOrigin(0.5);
+    this.add.text(580, 335, 'D6', fontStyle).setOrigin(0.5);
+    this.add.text(520, 370, 'E3', fontStyle).setOrigin(0.5);
+    this.add.text(520, 440, 'E5', fontStyle).setOrigin(0.5);
+    this.add.text(460, 405, 'E6', fontStyle).setOrigin(0.5);
+    this.add.text(460, 475, 'F4', fontStyle).setOrigin(0.5);
+    this.add.text(400, 440, 'F3', fontStyle).setOrigin(0.5);
+    this.add.text(340, 405, 'G5', fontStyle).setOrigin(0.5);
+    this.add.text(340, 475, 'F1', fontStyle).setOrigin(0.5);
+    this.add.text(280, 440, 'G3', fontStyle).setOrigin(0.5);
+    this.add.text(280, 370, 'G2', fontStyle).setOrigin(0.5);
+    this.add.text(280, 300, 'H4', fontStyle).setOrigin(0.5);
+    this.add.text(280, 230, 'A2', fontStyle).setOrigin(0.5);
+    this.add.text(280, 160, 'A6', fontStyle).setOrigin(0.5);
+    this.add.text(340, 125, 'B1', fontStyle).setOrigin(0.5);
+    this.add.text(220, 335, 'H6', fontStyle).setOrigin(0.5);
+    this.add.text(220, 265, 'H5', fontStyle).setOrigin(0.5);
 
 
 
+    /*
     h_h1.on('pointerdown', function () {
         rotateSprite(a_h1);
         //h_h1.setTint(0x7878ff);
@@ -83,6 +195,7 @@ function create () {
     h_h1.on('pointerup', function () {
         //h_h1.clearTint();
     });
+    */
 }
 
 function rotateSprite(animal) {

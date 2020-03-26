@@ -32,8 +32,8 @@ var hexagonGroup;
 var hexagonArray = [];
 var objects = {};
 
-function preload ()
-{
+
+function preload () {
     this.load.image("hexagon_inicial", "hexagon_inicial.png");
     this.load.image("hexagon_agec", "hexagon_agec.png");
     this.load.image("hexagon_agec_p", "hexagon_agec_p.png");
@@ -41,6 +41,10 @@ function preload ()
     this.load.image("hexagon_bdf_p", "hexagon_bdf_p.png");
     this.load.image("hexagon_hi", "hexagon_hi.png");
     this.load.image("hexagon_hi_p", "hexagon_hi_p.png");
+    this.load.image("pixel", "pixel.png");
+    this.load.image("pig", "pig.png");
+    this.load.image("cow", "cow.png");
+    this.load.image("chicken", "chicken.png");
 }
 
 function create () {
@@ -48,40 +52,46 @@ function create () {
     objects.camera.setBackgroundColor('rgba(255, 255, 255, 0.9)');
 
 
-
-
-
+    // Ranch tiles
     var h_inicial = this.add.sprite(400, 300, 'hexagon_inicial');
 
     var h_h1 = this.add.image(340, 265, "hexagon_hi").setInteractive();
-    var h_g4 = this.add.image(340, 335, "hexagon_agec");
-    var h_b2 = this.add.image(400, 230, "hexagon_bdf");
-    var h_i3 = this.add.image(400, 370, "hexagon_hi");
+    var h_g4 = this.add.image(340, 335, "hexagon_agec").setInteractive();
+    var h_b2 = this.add.image(400, 230, "hexagon_bdf").setInteractive();
+    var h_i3 = this.add.image(400, 370, "hexagon_hi").setInteractive();
 
 
-    var text = this.add.text(400, 300, '1', { fontFamily: 'Roboto Condensed', color: '#000000', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" });
-    text.setOrigin(0.5);
+    // Animal images
+    var a_h1 = this.add.image(340, 265, "pixel");
+    var a_g4 = this.add.image(340, 335, "pixel");
+    var a_b2 = this.add.image(400, 230, "pixel");
+    var a_i3 = this.add.image(400, 370, "pixel");
+
+    // Tile numbers
+    this.add.text(340, 265, '1', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
+    this.add.text(340, 335, '4', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
+    this.add.text(400, 230, '2', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
+    this.add.text(400, 370, '3', { fontFamily: 'Roboto Condensed', color: '#B3FF67', fontSize: '35px', wordWrap: true, wordWrapWidth: h_h1.width, align: "center" }).setOrigin(0.5);
 
 
 
     h_h1.on('pointerdown', function () {
-        rotateSprite(h_h1);
-
-        h_h1.setTint(0x7878ff);
-
-
+        rotateSprite(a_h1);
+        //h_h1.setTint(0x7878ff);
     });
 
     h_h1.on('pointerup', function () {
-
-        h_h1.clearTint();
-
+        //h_h1.clearTint();
     });
 }
 
-function rotateSprite(tile) {
-    if(tile.texture.key === "hexagon_hi") tile.setTexture('hexagon_hi_p');
-    else if(tile.texture.key === "hexagon_hi_p") tile.setTexture('hexagon_hi');
+function rotateSprite(animal) {
+    if(animal.texture.key === "pixel") {
+        animal.setTexture('chicken');
+    }
+    else if(animal.texture.key === "chicken") animal.setTexture('pig');
+    else if(animal.texture.key === "pig") animal.setTexture('cow');
+    else animal.setTexture('pixel');
 }
 
 function update ()

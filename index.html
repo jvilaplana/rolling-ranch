@@ -45,11 +45,20 @@ function preload () {
     this.load.image("pig", "pig.png");
     this.load.image("cow", "cow.png");
     this.load.image("chicken", "chicken.png");
+    this.load.image("stable", "stable.png");
 }
 
 function create () {
     objects.camera = this.cameras.add(0, 0, 800, 600);
     objects.camera.setBackgroundColor('rgba(255, 255, 255, 0.9)');
+
+    var stable1 = this.add.sprite(700, 100, 'stable');
+    var stable2 = this.add.sprite(700, 160, 'stable');
+    var barn1 = this.add.sprite(700, 220, 'stable');
+    var barn2 = this.add.sprite(700, 280, 'stable');
+    var greenhouse1 = this.add.sprite(700, 340, 'stable');
+    var greenhouse2 = this.add.sprite(700, 400, 'stable');
+    var greenhouse3 = this.add.sprite(700, 460, 'stable');
 
     // Ranch tiles
     var h_inicial = this.add.sprite(400, 300, 'hexagon_inicial');
